@@ -67,11 +67,13 @@
     <main class="page-shell">
       <div class="container page-layout">
         <aside class="profile-sidebar">
-          <img
-            class="profile-photo"
-            src="IMG_0368.jpg"
-            alt="Portrait of Ankit Kumar"
-          />
+          <div class="profile-photo-frame">
+            <img
+              class="profile-photo"
+              src="assets/profile-photo-formal.jpg"
+              alt="Portrait of Ankit Kumar"
+            />
+          </div>
 
           <h1>Ankit Kumar</h1>
           <p class="sidebar-role">MS Robotics<br />University of Minnesota</p>
@@ -186,6 +188,101 @@
 
           <section id="projects" class="content-section">
             <h2>Highlight Projects</h2>
+
+            <article class="project-card project-card-featured multi-uav-project reveal-on-scroll">
+              <div class="project-media-grid single-media">
+                <figure class="project-media-item">
+                  <a
+                    class="project-image-frame"
+                    href="https://www.youtube.com/watch?v=quvpeCY-58g"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Watch the four-drone field deployment video on YouTube"
+                  >
+                    <img
+                      class="project-image project-image-contained"
+                      src="assets/projects/multi-uav-formation-annotated.png"
+                      alt="Four UAVs flying through a prescribed-burn smoke plume, with the master drone labeled at the top and three worker drones below"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </a>
+                  <figcaption>
+                    Prescribed-burn field deployment: one master UAV coordinates three
+                    worker UAVs at distributed smoke-sampling positions.
+                  </figcaption>
+                </figure>
+              </div>
+
+              <div class="project-card-body">
+                <div class="project-card-head">
+                  <p class="project-kicker">Research Project · Field Deployment</p>
+                  <h3>Multi-UAV Autonomous Field Deployment</h3>
+                  <p class="project-skills">
+                    ROS 2, MAVROS, PX4 Autopilot, RTK-GPS, QGroundControl, RGB-DIH
+                  </p>
+                </div>
+
+                <div class="project-card-grid">
+                  <div class="project-copy-block">
+                    <p class="project-label">Research Objective</p>
+                    <p>
+                      Deployed a team of four drones during a prescribed-burn
+                      experiment to collect smoke-dispersion measurements from
+                      multiple spatial locations and study how the plume evolved
+                      over space and time.
+                    </p>
+                  </div>
+
+                  <div class="project-copy-block">
+                    <p class="project-label">Formation Execution</p>
+                    <ul class="project-list">
+                      <li>Used the top drone as the master and formation reference</li>
+                      <li>Shared the master GPS position with three workers through MAVROS</li>
+                      <li>Applied independent position offsets to maintain the formation</li>
+                      <li>Executed synchronized autonomous waypoint missions with PX4</li>
+                    </ul>
+                  </div>
+
+                  <div class="project-copy-block">
+                    <p class="project-label">How I Applied My Technical Skills</p>
+                    <ul class="project-list">
+                      <li>Configured ROS 2 communication across all four networked UAVs</li>
+                      <li>Converted live GPS data into worker-drone position setpoints</li>
+                      <li>Synchronized RGB-DIH measurements with GPS and flight telemetry</li>
+                      <li>Used QGroundControl to validate waypoints and monitor field tests</li>
+                      <li>Debugged communication, telemetry, and mission execution in the field</li>
+                    </ul>
+                  </div>
+
+                  <div class="project-copy-block">
+                    <p class="project-label">Research Outcome</p>
+                    <p>
+                      Produced a synchronized, georeferenced dataset linking smoke
+                      measurements and imagery to the position of each aircraft,
+                      enabling spatial and temporal analysis of smoke dispersion.
+                    </p>
+                    <div class="project-tech-tags multi-uav-roles" aria-label="UAV roles">
+                      <span>Master UAV</span>
+                      <span>Worker UAV 1</span>
+                      <span>Worker UAV 2</span>
+                      <span>Worker UAV 3</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="project-actions">
+                  <a
+                    class="project-button primary"
+                    href="https://www.youtube.com/watch?v=quvpeCY-58g"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Watch Field Deployment
+                  </a>
+                </div>
+              </div>
+            </article>
 
             <article class="project-card project-card-featured reveal-on-scroll">
               <div class="project-media-grid">

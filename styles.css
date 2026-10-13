@@ -200,15 +200,25 @@ html[data-theme="dark"] .theme-icon-moon {
   text-align: center;
 }
 
-.profile-photo {
+.profile-photo-frame {
+  position: relative;
   width: 100%;
   max-width: 235px;
   margin: 0 auto 16px;
   aspect-ratio: 1 / 1.12;
-  object-fit: cover;
-  object-position: center 18%;
+  overflow: hidden;
   border-radius: 22px;
   box-shadow: var(--shadow);
+}
+
+.profile-photo {
+  position: absolute;
+  left: 50%;
+  top: 66%;
+  width: auto;
+  height: 160%;
+  max-width: none;
+  transform: translate(-50%, -66%);
 }
 
 .profile-sidebar h1 {
@@ -483,6 +493,16 @@ html[data-theme="dark"] .theme-icon-moon {
   font-style: italic;
 }
 
+.project-kicker {
+  margin-bottom: 7px;
+  color: var(--accent);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
 .project-card {
   margin-bottom: 36px;
   overflow: hidden;
@@ -540,6 +560,24 @@ html[data-theme="dark"] .theme-icon-moon {
   object-fit: cover;
   background: var(--chip);
   transition: transform 220ms ease;
+}
+
+.project-image.project-image-contained {
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+
+.multi-uav-project .project-image-frame {
+  background: #dbe9ef;
+}
+
+.multi-uav-project .project-media-item figcaption {
+  max-width: 78ch;
+}
+
+.multi-uav-roles {
+  margin-top: 16px;
 }
 
 .project-image-frame:hover .project-image {
@@ -853,7 +891,7 @@ html[data-theme="dark"] .theme-icon-moon {
     position: static;
   }
 
-  .profile-photo {
+  .profile-photo-frame {
     max-width: 290px;
   }
 
