@@ -592,6 +592,23 @@ html[data-theme="dark"] .theme-icon-moon {
   line-height: 1.45;
 }
 
+.media-label {
+  display: block;
+  margin-bottom: 3px;
+  color: var(--heading);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.manipulation-project {
+  border-color: color-mix(in srgb, var(--accent) 30%, var(--line));
+}
+
+.manipulation-tags {
+  margin-top: 20px;
+}
+
 .project-card-body {
   padding: 22px 24px 24px;
 }
@@ -1020,6 +1037,10 @@ html[data-theme="dark"] .theme-icon-moon {
   }
 
   .project-media-grid.single-media {
+    grid-template-columns: 1fr;
+  }
+
+  .manipulation-project .project-media-grid {
     grid-template-columns: 1fr;
   }
 

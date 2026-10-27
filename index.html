@@ -6,7 +6,7 @@
     <title>Ankit Kumar | Robotics Portfolio</title>
     <meta
       name="description"
-      content="Portfolio website for Ankit Kumar, a robotics graduate student focused on perception, SLAM, and autonomous systems."
+      content="Portfolio website for Ankit Kumar, a robotics graduate student focused on robot learning, manipulation, perception, SLAM, and autonomous systems."
     />
     <script>
       const savedTheme = localStorage.getItem("portfolio-theme");
@@ -188,6 +188,101 @@
 
           <section id="projects" class="content-section">
             <h2>Highlight Projects</h2>
+
+            <article class="project-card project-card-featured manipulation-project reveal-on-scroll">
+              <div class="project-media-grid">
+                <figure class="project-media-item">
+                  <video
+                    class="project-video"
+                    autoplay
+                    muted
+                    loop
+                    controls
+                    playsinline
+                    preload="metadata"
+                    poster="assets/projects/so101-teleoperation-poster.jpg"
+                  >
+                    <source src="assets/videos/so101-teleoperation.mp4" type="video/mp4" />
+                  </video>
+                  <figcaption>
+                    <span class="media-label">Teleoperation</span>
+                    Leader-follower data collection for synchronized vision, joint-state,
+                    and action demonstrations.
+                  </figcaption>
+                </figure>
+                <figure class="project-media-item">
+                  <video
+                    class="project-video"
+                    autoplay
+                    muted
+                    loop
+                    controls
+                    playsinline
+                    preload="metadata"
+                    poster="assets/projects/so101-autonomous-demonstration-poster.jpg"
+                  >
+                    <source src="assets/videos/so101-autonomous-demonstration.mp4" type="video/mp4" />
+                  </video>
+                  <figcaption>
+                    <span class="media-label">Autonomous Demonstration</span>
+                    A learned, vision-conditioned policy performs the cube-to-cup task
+                    on the physical SO-101 robot.
+                  </figcaption>
+                </figure>
+              </div>
+
+              <div class="project-card-body">
+                <div class="project-card-head">
+                  <p class="project-kicker">Robot Learning · Physical Deployment</p>
+                  <h3>Vision-Based Robotic Manipulation</h3>
+                  <p class="project-skills">SO-101, ACT, Diffusion Policy, PyTorch</p>
+                </div>
+
+                <div class="project-card-grid">
+                  <div class="project-copy-block">
+                    <p class="project-label">Data Collection</p>
+                    <p>
+                      Built a vision-conditioned manipulation pipeline with fixed and
+                      wrist cameras, collecting 100 teleoperated demonstrations with
+                      synchronized images, robot joint states, and actions.
+                    </p>
+                  </div>
+
+                  <div class="project-copy-block">
+                    <p class="project-label">Policy Training</p>
+                    <p>
+                      Trained and evaluated ACT and Diffusion Policy using 85 training
+                      episodes and 15 held-out validation episodes.
+                    </p>
+                  </div>
+
+                  <div class="project-copy-block">
+                    <p class="project-label">Evaluation</p>
+                    <p>
+                      Diffusion Policy achieved 31% lower arm-joint prediction error
+                      and 34% lower gripper prediction error than ACT.
+                    </p>
+                  </div>
+
+                  <div class="project-copy-block">
+                    <p class="project-label">Physical Deployment</p>
+                    <p>
+                      Deployed both policies on the physical SO-101 robot for
+                      autonomous, vision-conditioned cube-to-cup manipulation.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="project-tech-tags manipulation-tags" aria-label="Technologies used">
+                  <span>SO-101</span>
+                  <span>ACT</span>
+                  <span>Diffusion Policy</span>
+                  <span>PyTorch</span>
+                  <span>Imitation Learning</span>
+                  <span>Vision-Conditioned Control</span>
+                </div>
+              </div>
+            </article>
 
             <article class="project-card project-card-featured multi-uav-project reveal-on-scroll">
               <div class="project-media-grid single-media">
@@ -805,7 +900,7 @@
                 </div>
               </div>
               <div class="education-side">
-                <span class="education-date">Sept 2024 - May 2026</span>
+                <span class="education-date">Sept 2024 - Dec 2026</span>
               </div>
             </article>
 
